@@ -8,4 +8,49 @@
 body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-image: url(https://a.cdn-hotels.com/gdcs/production0/d1589/6d9eed40-c31d-11e8-9739-0242ac110006.jpg);
+  background-size: cover;
+  font-size: 16px;
+  text-shadow: 3px 4px 5px black;
+  color: #fff;
+}
+
+.header {
+  padding: 15px;
+}
+
+.container {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .searchBar {
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.44);
+  border-radius: 30px;
+  width: 100%;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.container h1 {
+  font-size: 2.5em;
+}
+.container h2 {
+  font-size: 5em;
+}
+.container h3 {
+  font-size: 1.8em;
+}
+.container h4 {
+  font-size: 1.5em;
+}
+.container h4 span:first-child {
+  color: #00CFFF;
 }/*# sourceMappingURL=main.css.map */
