@@ -1,9 +1,25 @@
-/* checkin if the browser supports geolocation */
+function findCurrentCity () {
+    const status = document.querySelector(".current-location");
 
-if ("geolocation" in navigator) {
-    /* geolocation is available */
-} else {
-    alert("I'm sorry, but geolocation services are not supported by your browser.");
+    const success = (position) => {
+        console.log(position);
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const geoApiUrl = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=" + lat + "&longitude=" + lon + "&localityLanguage=en&key=bdc_69ccd806013d4ee58db0086efbef14ec"
+
+        fetch(geoApiUrl)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            status.textContent = data.city +', ' + data.countryName
+        })
+    }
+
+    const error = () => {
+        status.textContent = "Unable to retrieve your location";
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error);
 }
 
 /* variables */
@@ -27,9 +43,18 @@ let weather = {
         const { country } = data.sys
         console.log(name, icon, description, temp, humidity);
         document.querySelector(".city").innerText = name + ', ' + country;
-        document.querySelector(".temp").innerText = temp + "C°";
+        document.querySelector(".temp").innerText = temp + "° C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         document.querySelector(".description").innerText = description;
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".searchBar").value);
     }
-}
+};
+
+document.querySelector(".search-btn").addEventListener("click", function () {
+ weather.search();
+});
+
+findCurrentCity()
