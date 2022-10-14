@@ -11,16 +11,20 @@ function findCurrentCity () {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            status.textContent = data.city +', ' + data.countryName
+            status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision
+            + ' - ' + data.countryName
         })
     }
 
+    // localityInfo.administrative[6].name
     const error = () => {
         status.textContent = "Unable to retrieve your location";
     }
 
     navigator.geolocation.getCurrentPosition(success, error);
 }
+
+
 
 /* variables */
 
