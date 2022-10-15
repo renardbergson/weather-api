@@ -11,8 +11,7 @@ function findCurrentCity () {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision
-            + ' - ' + data.countryName
+            status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision;
         })
     }
 
@@ -46,7 +45,7 @@ let weather = {
         const { temp, humidity } = data.main;
         const { country } = data.sys
         console.log(name, icon, description, temp, humidity);
-        document.querySelector(".city").innerText = name + ', ' + country;
+        document.querySelector(".city").innerText = name + ', ' + country;       
         document.querySelector(".temp").innerText = temp.toFixed(1) + "° C";
         document.querySelector(".humidity").innerText = humidity + "%";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
@@ -55,6 +54,7 @@ let weather = {
     search: function () {
         this.fetchWeather(document.querySelector(".searchBar").value);
     }
+
 };
 
 document.querySelector(".search-btn").addEventListener("click", function () {
@@ -67,4 +67,4 @@ document.querySelector(".searchBar").addEventListener("keypress", function (e) {
      }
 },false);
 
-findCurrentCity()
+findCurrentCity();

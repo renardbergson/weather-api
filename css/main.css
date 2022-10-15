@@ -144,6 +144,10 @@ input::placeholder {
   height: 48px;
 }
 
+.icon::after {
+  display: none;
+}
+
 .container h4 span:first-child {
   color:#fff;
   font-weight: bold;
