@@ -47,7 +47,7 @@ let weather = {
         const { country } = data.sys
         console.log(name, icon, description, temp, humidity);
         document.querySelector(".city").innerText = name + ', ' + country;
-        document.querySelector(".temp").innerText = temp + "° C";
+        document.querySelector(".temp").innerText = temp.toFixed(1) + "° C";
         document.querySelector(".humidity").innerText = humidity + "%";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         document.querySelector(".description").innerText = description;
