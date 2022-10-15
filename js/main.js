@@ -20,7 +20,6 @@ function findCurrentCity () {
         })
     }
 
-    // localityInfo.administrative[6].name
     const error = () => {
         status.textContent = "Unable to retrieve your location";
     }
@@ -28,9 +27,6 @@ function findCurrentCity () {
     navigator.geolocation.getCurrentPosition(success, error);
 }
 
-
-
-/* variables */
 
 let weather = {
     apiKey: "ad21aa0e93281234d77fe50bb70510f6",
@@ -64,12 +60,51 @@ let weather = {
         } else {
             document.querySelector(".humidity").style = "text-shadow: 0 0 5px #00CFFF"; 
         }
+        changingBackground(icon);
+        console.log(icon)
     },
     search: function () {
         this.fetchWeather(document.querySelector(".searchBar").value);
+    },
+    gettingIcon: function(data) {
+        return data.weather[0]
     }
 
 };
+
+function changingBackground(weather) {
+    switch(weather) {
+        case "01d" || "01n":
+            document.querySelector("body").style = "background-image: url(../images/clear-sky.jpg)";
+            break;
+        case "02d" || "02n":
+            document.querySelector("body").style = "background-image: url(../images/few-clouds.jpg)";
+            break;
+        case "03d" || "03n":
+            document.querySelector("body").style = "background-image: url(../images/scattered-clouds.jpg)";
+            break;
+        case "04d" || "04n":
+            document.querySelector("body").style = "background-image: url(../images/broken-clouds.jpg)";
+            break;
+        case "09d" || "09n":
+            document.querySelector("body").style = "background-image: url(../images/shower-rain.jpg)";
+            break;
+        case "10d" || "10n":
+            document.querySelector("body").style = "background-image: url(../images/rain.jpg)";
+            break;
+        case "11d" || "11n":
+            document.querySelector("body").style = "background-image: url(../images/thunderstorm.jpg)";
+            break;
+        case "13d" || "13n":
+            document.querySelector("body").style = "background-image: url(../images/snow.jpg)";
+            break;
+        case "50d" || "50n":
+            document.querySelector("body").style = "background-image: url(../images/mist.jpg)";
+            break;
+        default:
+            return;
+    }
+}
 
 document.querySelector(".search-btn").addEventListener("click", function () {
  weather.search();
@@ -82,3 +117,4 @@ document.querySelector(".searchBar").addEventListener("keypress", function (e) {
 },false);
 
 findCurrentCity();
+
