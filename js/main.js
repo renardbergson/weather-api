@@ -61,4 +61,10 @@ document.querySelector(".search-btn").addEventListener("click", function () {
  weather.search();
 });
 
+document.querySelector(".searchBar").addEventListener("keypress", function (e) {
+    if(e.which == 13){
+        weather.search();
+     }
+},false);
+
 findCurrentCity()
