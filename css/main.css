@@ -28,27 +28,35 @@ header .header-bg {
   filter: blur(35px);
 }
 
-header .current-location {
+header .cl-field{
   position: absolute;
   padding: 16px; 
+}
+
+.current-location {
+  padding-left: 8px;
 }
 
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 24px 24px;
   transform: translate(-50%, -50%);
 }
 
 .container .search-field {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 30px;
-  width: 300px;
+  width: 100%;
   height: 50px;
   color: #fff;
   display: flex;
   text-align: center;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .container .searchBar {
@@ -86,7 +94,7 @@ input::placeholder {
   border-radius: 30px;
   cursor: pointer;
   position: absolute;
-  right: 0;
+  right: 16px;
   width: 2rem;
   height: 2rem;
 }
@@ -121,7 +129,18 @@ input::placeholder {
 }
 .container h4 {
   font-size: 1.5em;
-}
-.container h4 span:first-child {
   color: #00CFFF;
+}
+
+.container .description-weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container h4 span:first-child {
+  color:#fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00CFFF;
+  padding-left:
 }/*# sourceMappingURL=main.css.map */
