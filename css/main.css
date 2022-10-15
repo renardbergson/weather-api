@@ -11,12 +11,26 @@ body {
   background-image: url(https://a.cdn-hotels.com/gdcs/production0/d1589/6d9eed40-c31d-11e8-9739-0242ac110006.jpg);
   background-size: cover;
   font-size: 16px;
-  text-shadow: 3px 4px 5px black;
   color: #fff;
 }
 
-.current-location span {
-  padding: 16px;  
+header {
+  display: flex; 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+header .header-bg {
+  width: 350px;
+  height: 54px;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: blur(35px);
+}
+
+header .current-location {
+  position: absolute;
+  padding: 16px; 
 }
 
 .container {
@@ -26,19 +40,76 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.container .search-field {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
 .container .searchBar {
   outline: none;
   border: none;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
-  width: 100%;
   height: 50px;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  font-size: 1.5em;
-  text-align: center;
+  background-color: transparent;
 }
+
+input {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 90%;
+}
+
+input::placeholder {
+  color: rgb(187, 184, 184);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-left: 16px;
+}
+
+.search-btn {
+  margin: 8px 16px;
+  background-color:  transparent;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.search-btn svg {
+  color: #fff;
+}
+
+.search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition:all 300ms ease-in-out;
+  -moz-transition:all 300ms ease-in-out;
+  -o-transition:all 300ms ease-in-out;
+  transition:all 300ms ease-in-out;
+}
+
+.search-btn:active {
+  filter: brightness(50%);  
+}
+
+
 .container h1 {
   font-size: 2.5em;
 }

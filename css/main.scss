@@ -1,16 +1,22 @@
 @import 'base';
 
-.current-location {
+.header {
 
-    span {
-        padding: 16px;
-    }  
+    display: flex; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
 
     .header-bg {
         width: 350px;
         height: 54px;
-        background-color: rgba(0, 0, 0, 0.3);
-        filter: blur(25px);
+        background-color: rgba(0, 0, 0, 0.4);
+        filter: blur(35px);
+    }
+
+    .current-location {
+        position: absolute;
+        padding: 16px; 
     }
 }
 
