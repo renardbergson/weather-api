@@ -50,6 +50,15 @@ let weather = {
         document.querySelector(".humidity").innerText = humidity + "%";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         document.querySelector(".description").innerText = description;
+        document.querySelector(".description-weather").style.display = "flex";
+        document.querySelector("h4").style.display = "flex";
+        if(humidity < 30) {
+            document.querySelector(".humidity").style = "text-shadow: 0 0 5px #ffc400";
+        } else if(humidity < 20) {
+            document.querySelector(".humidity").style = "text-shadow: 0 0 5px #ff0000";
+        } else {
+            document.querySelector(".humidity").style = "text-shadow: 0 0 5px #00CFFF"; 
+        }
     },
     search: function () {
         this.fetchWeather(document.querySelector(".searchBar").value);
