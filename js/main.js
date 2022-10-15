@@ -11,7 +11,12 @@ function findCurrentCity () {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision;
+            if(data.name = " ") {
+                status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision;
+            } else {
+                status.textContent = data.city +', ' + data.principalSubdivision;
+            }
+            
         })
     }
 
