@@ -56,7 +56,7 @@ header .cl-field{
   display: flex;
   text-align: center;
   align-items: center;
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 
 .container .searchBar {
