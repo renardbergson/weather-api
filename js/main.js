@@ -74,31 +74,31 @@ let weather = {
 
 function changingBackground(weather) {
     switch(weather) {
-        case "01d" || "01n":
+        case "01d":
             document.querySelector("body").style = "background-image: url(../images/clear-sky.jpg)";
             break;
-        case "02d" || "02n":
+        case "02d":
             document.querySelector("body").style = "background-image: url(../images/few-clouds.jpg)";
             break;
-        case "03d" || "03n":
+        case "03d":
             document.querySelector("body").style = "background-image: url(../images/scattered-clouds.jpg)";
             break;
-        case "04d" || "04n":
+        case "04d":
             document.querySelector("body").style = "background-image: url(../images/broken-clouds.jpg)";
             break;
-        case "09d" || "09n":
+        case "09d":
             document.querySelector("body").style = "background-image: url(../images/shower-rain.jpg)";
             break;
-        case "10d" || "10n":
+        case "10d":
             document.querySelector("body").style = "background-image: url(../images/rain.jpg)";
             break;
-        case "11d" || "11n":
+        case "11d":
             document.querySelector("body").style = "background-image: url(../images/thunderstorm.jpg)";
             break;
-        case "13d" || "13n":
+        case "13d":
             document.querySelector("body").style = "background-image: url(../images/snow.jpg)";
             break;
-        case "50d" || "50n":
+        case "50d":
             document.querySelector("body").style = "background-image: url(../images/mist.jpg)";
             break;
         default:
