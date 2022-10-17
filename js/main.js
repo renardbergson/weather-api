@@ -53,7 +53,7 @@ let weather = {
         document.querySelector(".description").innerText = description;
         document.querySelector(".description-weather").style.display = "flex";
         document.querySelector("h4").style.display = "flex";
-        if(humidity < 30) {
+        if(humidity < 30 && humidity > 19 ) {
             document.querySelector(".humidity").style = "text-shadow: 0 0 5px #ffc400";
         } else if(humidity < 20) {
             document.querySelector(".humidity").style = "text-shadow: 0 0 5px #ff0000";
