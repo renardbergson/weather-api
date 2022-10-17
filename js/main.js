@@ -117,4 +117,4 @@ document.querySelector(".searchBar").addEventListener("keypress", function (e) {
 },false);
 
 findCurrentCity();
-
+changingBackground(weather.gettingIcon)
