@@ -38,4 +38,3 @@ A website that consume an API to get the weather and temperature from some place
 ## What is missing
 
 - Actually, it's not possible to search for a city and its state or province together (maybe, this is because that kind of function is not free of charge to use)
-
