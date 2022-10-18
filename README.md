@@ -6,7 +6,7 @@
 
 A website that consume an API to get the weather and temperature from some place(city).
 
-<a href="https://renardbergson.github.io/weather-api/" target="_blank"><img src="../images/presentation.gif" ></a>
+<a href="https://renardbergson.github.io/weather-api/" target="_blank"><img src="./images/presentation.gif" ></a>
 
 ## Take a look at this project in action:
 
