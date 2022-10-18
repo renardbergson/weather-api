@@ -106,7 +106,7 @@ function changingBackground(weatherIcon) {
             break;
         // broken clouds at night
         case "04n":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/amazing-beautiful-sky-with-clouds_58702-1653.jpg?w=1380&t=st=1666027575~exp=1666028175~hmac=f9beb5f1a35f09d88b65b305288d0a871f48ed53006db702571f986e4e7babb2)";
+            document.querySelector("body").style = "background-image: url(https://pbs.twimg.com/media/ECBmR0tVAAA420K?format=jpg&name=4096x4096)";
             break;
         // soft rain
         case "09d":
