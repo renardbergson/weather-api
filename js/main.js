@@ -86,15 +86,15 @@ function changingBackground(weatherIcon) {
             break;
         // few clouds
         case "02d":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/blue-sky-with-puffy-white-clouds_1385-12.jpg?w=1480&t=st=1666027291~exp=1666027891~hmac=852e02b74909ef83d21b641592deb540689a0f3046369127db0d5d8677908d63)";
+            document.querySelector("body").style = "background-image: url(https://www.creativefabrica.com/wp-content/uploads/2020/08/29/Blue-sky-with-white-Clouds-Graphics-5178971-1-1-580x387.jpg)";
             break;
         // few clouds at night
         case "02n":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/beautiful-architecture-building-tokyo-cityscape_74190-7538.jpg?w=1060&t=st=1666027458~exp=1666028058~hmac=9809f4e90e9d005814a16d3676798192545657ddb0881e99d3663f0b57d27273)";
+            document.querySelector("body").style = "background-image: url(https://images3.alphacoders.com/701/701110.jpg)";
             break;
         // overcast clouds
         case "03d":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/sun-sunlight-bright-outdoor-sky_1127-2391.jpg?w=1380&t=st=1666027121~exp=1666027721~hmac=c761afc6fd2beb54efaa2d67ab8118f073fa1ca0dd76c19fab7b582ce5f2dd3e)";
+            document.querySelector("body").style = "background-image: url(https://www.boatus.com/-/media/expert-advice-archive/2018/april/cirrocumulus-clouds.ashx?la=en&hash=C397276BB7FBA5040E7696E5F5B41B61)";
             break;
         // overcast clouds at night
         case "03n":
@@ -102,7 +102,7 @@ function changingBackground(weatherIcon) {
             break;
         // broken clouds
         case "04d":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/sunset-mountains_1127-4133.jpg?w=1380&t=st=1666027208~exp=1666027808~hmac=0223a7ee4b27fbfe2f3e447c1b5584525bdff4dc34e40d8097efd89755a0b804)";
+            document.querySelector("body").style = "background-image: url(https://www.boatus.com/-/media/expert-advice-archive/2018/april/altocumulus-clouds.ashx?la=en&hash=93AF3BE82726F6D67595634A178BB752)";
             break;
         // broken clouds at night
         case "04n":
@@ -114,7 +114,7 @@ function changingBackground(weatherIcon) {
             break;
         // soft rain at night
         case "09n":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/natural-water-rain-drops-glass-window-abstract-texture-background_640221-159.jpg?w=1380&t=st=1666028413~exp=1666029013~hmac=0a27aba117c980344c20b3037a5f40acc8eaa6f3349aa78cc360c926623c9347)";
+            document.querySelector("body").style = "background-image: url(https://c4.wallpaperflare.com/wallpaper/264/852/912/urban-rain-night-lights-wallpaper-preview.jpg)";
             break;
         // rain
         case "10d":
@@ -122,7 +122,7 @@ function changingBackground(weatherIcon) {
             break;
         // rain at night
         case "10n":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/city-night-through-window-with-rain-drops_53876-128778.jpg?w=1380&t=st=1666028520~exp=1666029120~hmac=1437c5a370695a1fe1365adf558b340ea9bf557e3d65a0ed3d42861d96b2ddd0)";
+            document.querySelector("body").style = "background-image: url(https://images.unsplash.com/photo-1470432581262-e7880e8fe79a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80)";
             break;
         // thunderstorm
         case "11d":
@@ -130,7 +130,7 @@ function changingBackground(weatherIcon) {
             break;
         // thunderstorm at night
         case "11n":
-            document.querySelector("body").style = "background-image: url(https://img.freepik.com/free-photo/lightning-dark-sky-buildings-city-night_181624-15930.jpg?w=1380&t=st=1666028034~exp=1666028634~hmac=afadbd53683d85b153d96a60634347bd5ff3718ca23861062153e8b576852a0a)";
+            document.querySelector("body").style = "background-image: url(https://images.unsplash.com/photo-1461511669078-d46bf351cd6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)";
             break;
         // snow
         case "13d":
