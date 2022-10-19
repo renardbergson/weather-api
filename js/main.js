@@ -3,7 +3,7 @@ function findCurrentCity () {
     const status = document.querySelector(".current-location");
 
     const success = (position) => {
-        console.log(position);
+        
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
         const geoApiUrl = "https://api.bigdatacloud.net/data/reverse-geocode?latitude=" + lat + "&longitude=" + lon + "&localityLanguage=en&key=bdc_69ccd806013d4ee58db0086efbef14ec"
@@ -11,7 +11,7 @@ function findCurrentCity () {
         fetch(geoApiUrl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            
             if(data.name = " ") {
                 status.textContent = data.localityInfo.administrative[6].name +', ' + data.principalSubdivision;
             } else {
@@ -46,7 +46,7 @@ let weather = {
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { country } = data.sys
-        console.log(name, icon, description, temp, humidity);
+        
         document.querySelector(".city").innerText = name + ', ' + country;       
         document.querySelector(".temp").innerText = temp.toFixed(1) + "° C";
         document.querySelector(".humidity").innerText = humidity + "%";
@@ -62,8 +62,7 @@ let weather = {
             document.querySelector(".humidity").style = "text-shadow: 0 0 5px #00CFFF"; 
         }
         changingBackground(icon);
-        console.log(icon)
-    },
+        
     search: function () {
         this.fetchWeather(document.querySelector(".searchBar").value);
     },
